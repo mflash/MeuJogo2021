@@ -26,6 +26,10 @@ public class MoveSeno : MonoBehaviour
         pos.z = Mathf.Sin(pos.x * 2 * Mathf.PI/WaveLength) * WaveAmplitude/2;
         if(pos.x > xmax)
             pos.x = xmin;
+        // Vector3 dif = new Vector3(pos.x-lastPos.x,0,pos.z-lastPos.z);
+        // transform.forward = dif;
+        transform.forward = pos - lastPos;
         transform.position = pos;
+        // Debug.Log("Angulo:"+Vector3.Angle(pos,lastPos));
     }
 }
