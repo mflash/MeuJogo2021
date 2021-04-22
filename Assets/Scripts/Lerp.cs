@@ -50,7 +50,7 @@ public class Lerp : MonoBehaviour
             float x = Random.Range(-4.5f, 4.5f);
             float z = Random.Range(-4.5f, 4.5f);
             target.position = new Vector3(x, 0.5f, z);
-            mat.color = Color.gray;
+            // mat.color = Color.gray;
             ResetPos();
         }
     }
